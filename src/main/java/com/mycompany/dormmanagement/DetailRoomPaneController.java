@@ -114,6 +114,9 @@ public class DetailRoomPaneController implements Initializable {
         dataTableView.getItems().clear();
         addDataToTable(dataTableView, 1);
         parentController.refreshTable();
+        crRoom.getInfo(IDRoom);
+        nostudentLable.setText(crRoom.getNoStudent());
+        statusLable.setText(crRoom.getStatus());
         
     
     }
