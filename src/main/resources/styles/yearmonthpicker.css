@@ -1,0 +1,20 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 7, 2022, 9:56:46 AM
+    Author     : Mayy
+*/
+.button{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    
+    
+}
+#yearMonthPicker{
+    -fx-background-color: white;
+    -fx-border-color: gray;
+    -fx-border-radius: 2px;
+    /*-fx-self-aligment: center;*/
+}

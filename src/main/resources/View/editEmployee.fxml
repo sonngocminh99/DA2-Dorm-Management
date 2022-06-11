@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="550.0" styleClass="casualPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dormmanagement.EditEmployeeController">
+    <stylesheets>
+        <URL value="@/styles/main.css" />
+    </stylesheets>
+    <children>
+      <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefWidth="150.0" text="ID">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="85.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="IDText" alignment="TOP_CENTER" layoutX="235.0" layoutY="10.0" text="Label">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label prefWidth="150.0" text="Họ và tên">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="nameText" onKeyReleased="#TextChange" prefHeight="45.0" prefWidth="200.0" styleClass="textField2" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="nameError" text="Label" textFill="RED" visible="false">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="250.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="33.0">
+               <children>
+                  <Label prefWidth="150.0" text="Ngày sinh">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="birthdayPicker" onAction="#TextChange" prefHeight="45.0" prefWidth="200.0" styleClass="textField2" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="birthdayError" layoutX="10.0" layoutY="683.0" text="Label" textFill="RED" visible="false">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="250.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="56.0">
+               <children>
+                  <Label prefWidth="150.0" text="Địa chỉ">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="addressText" onKeyReleased="#TextChange" prefHeight="45.0" prefWidth="200.0" styleClass="textField2" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="addressError" layoutX="10.0" layoutY="691.0" text="Label" textFill="RED" visible="false">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="250.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="79.0">
+               <children>
+                  <Label prefWidth="150.0" text="Vị trí">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="positionCombo" prefHeight="45.0" prefWidth="200.0" styleClass="combobox" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="102.0">
+               <children>
+                  <Label prefWidth="150.0" text="Số điện thoại">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phoneText" onKeyReleased="#TextChange" prefHeight="45.0" prefWidth="200.0" styleClass="textField2" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="phoneError" layoutX="10.0" layoutY="695.0" text="Label" textFill="RED" visible="false">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="250.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="employeeUpdateBtn" disable="true" mnemonicParsing="false" onAction="#updateEmployee" styleClass="buttonindashboard" text="Chỉnh sửa thông tin cá nhân">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="125.0">
+               <children>
+                  <Label prefWidth="150.0" text="Tên tài khoản">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="usernameText" text="Label">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="85.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="148.0">
+               <children>
+                  <Label prefWidth="150.0" text="Mật khẩu">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="passwordText" onKeyReleased="#TextChange" prefHeight="45.0" prefWidth="200.0" styleClass="textField2" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="passError" layoutX="10.0" layoutY="393.0" text="Label" textFill="RED" visible="false">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="250.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="171.0">
+               <children>
+                  <Label prefWidth="150.0" text="Quyền">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="permissionCombo" prefHeight="45.0" prefWidth="200.0" styleClass="combobox" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="278.0">
+               <children>
+                  <Button fx:id="accountUpdateBtn" disable="true" mnemonicParsing="false" onAction="#updateAccount" styleClass="buttonindashboard" text="Chỉnh sửa tài khoản">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#back" styleClass="appBtn-red" text="Quay lại">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="230.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

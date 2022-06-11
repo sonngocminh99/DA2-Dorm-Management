@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="Dashboard" maxWidth="1363.0" prefHeight="840.0" prefWidth="1360.0" style="-fx-background-color: white" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dormmanagement.DashboardController">
+    <stylesheets>
+        <URL value="@/styles/main.css" />
+    </stylesheets>
+   <children>
+      <BorderPane layoutX="116.0" layoutY="47.0" prefHeight="75.0" prefWidth="1360.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <Line endX="645.2929077148438" startX="-710.0" styleClass="line" BorderPane.alignment="CENTER" />
+         </bottom>
+         <left>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="120.0">
+                     <children>
+                        <Label fx:id="crUsername1" text="Username:">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="crPermission1" text="Permission:">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="crUsername" text="Username">
+                           <font>
+                              <Font name="Segoe UI Bold" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="crPermission" text="Label">
+                           <font>
+                              <Font name="Segoe UI" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="20.0" />
+               </BorderPane.margin>
+            </HBox>
+         </left>
+         <right>
+            <Button mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: white;" text="Đăng xuất" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Button>
+         </right>
+      </BorderPane>
+      <BorderPane layoutY="75.0" prefHeight="75.0" prefWidth="1360.0">
+         <right>
+            <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="75.0" prefWidth="751.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="aboutBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" styleClass="tabButton" text="Về chúng tôi">
+                     <font>
+                        <Font name="Segoe UI Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="homeBtn" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" styleClass="tabButton" text="Trang chủ">
+                     <font>
+                        <Font name="Segoe UI Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="45.0" right="45.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+         </right>
+         <bottom>
+            <Line endX="645.2929077148438" startX="-710.0" styleClass="line" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin></Line>
+         </bottom>
+         <left>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logo" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets top="7.5" />
+                     </HBox.margin></ImageView>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <Label text="My Dorm" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Segoe UI Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </center>
+                  </BorderPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="50.0" />
+               </BorderPane.margin>
+            </HBox>
+         </left>
+      </BorderPane>
+      <StackPane layoutY="151.0">
+         <children>
+            <Pane fx:id="homePane" prefWidth="1360.0" styleClass="casualPane">
+               <children>
+                  <BorderPane prefHeight="689.0" prefWidth="300.0">
+                     <top>
+                        <Label text="Danh mục" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Segoe UI Bold" size="32.0" />
+                           </font>
+                           <BorderPane.margin>
+                              <Insets top="10.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </top>
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets top="20.0" />
+                           </BorderPane.margin>
+                           <children>
+                              <Button fx:id="roomBtn" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" prefWidth="300.0" styleClass="tabButton2" text="Quản lý phòng">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Line endX="160.0" startX="-100.0" styleClass="line">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Button fx:id="studentBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" prefWidth="300.0" styleClass="tabButton2" text="Danh sách sinh viên">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Line endX="160.0" layoutX="131.0" layoutY="386.0" startX="-100.0" styleClass="line">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Button fx:id="ewBillBtn" layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" prefWidth="300.0" styleClass="tabButton2" text="Điện - Nước">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Line endX="160.0" layoutX="111.0" layoutY="387.0" startX="-100.0" styleClass="line">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Button fx:id="rentBillBtn" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" prefWidth="300.0" styleClass="tabButton2" text="Tiền phòng">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Line endX="160.0" layoutX="131.0" layoutY="238.0" startX="-100.0" styleClass="line">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Button fx:id="reportBtn" layoutX="10.0" layoutY="235.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" prefWidth="300.0" styleClass="tabButton2" text="Báo cáo thống kê">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Line endX="160.0" layoutX="131.0" layoutY="314.0" startX="-100.0" styleClass="line">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Button fx:id="apartmentBtn" layoutX="10.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" prefWidth="300.0" styleClass="tabButton2" text="Quản lý tòa" visible="false">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Line fx:id="line1" endX="160.0" layoutX="131.0" layoutY="390.0" startX="-100.0" styleClass="line" visible="false">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Button fx:id="accountBtn" layoutX="10.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" prefWidth="300.0" styleClass="tabButton2" text="Cấp tài khoản" visible="false">
+                                 <font>
+                                    <Font name="Segoe UI Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Line fx:id="line2" endX="160.0" layoutX="111.0" layoutY="466.0" startX="-100.0" styleClass="line" visible="false">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+                  <Line endX="474.583984375" endY="339.4215393066406" layoutX="136.0" layoutY="18.0" rotate="90.0" startX="-144.63694763183594" startY="338.9727783203125" styleClass="line" />
+                  <Pane fx:id="homeMainView" layoutX="330.0" layoutY="50.0" prefHeight="600.0" prefWidth="1000.0" styleClass="casualPane" />
+               </children>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+            </Pane>
+            <Pane fx:id="aboutPane" prefHeight="689.0" prefWidth="1360.0" styleClass="casualPane" />
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

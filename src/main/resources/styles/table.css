@@ -1,0 +1,26 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 6, 2022, 5:30:16 PM
+    Author     : Mayy
+*/
+.table{
+    -fx-background-color: white;
+    -fx-border-color: #8C8C8C;
+    -fx-color: white;
+    
+}
+.table .column-header-background{
+   -fx-background-color: #2CA8E9; 
+   
+}
+.table .column-header .label{
+   -fx-text-fill: white;
+   
+}
+.column{
+    -fx-text-alignment: center;
+}
+

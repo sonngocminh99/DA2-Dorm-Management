@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="610.0" styleClass="casualPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dormmanagement.AddRentBillController">
+    <stylesheets>
+        <URL value="@/styles/main.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="516.0" prefWidth="610.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="400.0" prefWidth="610.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="610.0">
+                     <children>
+                        <Label text="Tòa">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" right="35.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="apartmentComboBox" onAction="#selectApartment" prefHeight="45.0" prefWidth="250.0" styleClass="combobox">
+                           <HBox.margin>
+                              <Insets left="102.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Số phòng">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" right="35.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="roomText" disable="true" prefHeight="45.0" prefWidth="250.0" styleClass="textField2">
+                           <HBox.margin>
+                              <Insets left="52.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="608.0">
+                     <children>
+                        <Label text="ID Sinh viên">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="studentComboBox" onAction="#selectStudent" prefHeight="45.0" prefWidth="250.0" styleClass="combobox">
+                           <HBox.margin>
+                              <Insets left="68.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Họ tên ">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" right="35.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="nameText" disable="true" prefHeight="45.0" prefWidth="250.0" styleClass="textField2">
+                           <HBox.margin>
+                              <Insets left="70.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="610.0">
+                     <children>
+                        <Label text="Tổng tiền">
+                           <font>
+                              <Font name="Segoe UI Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="totalText" disable="true" prefHeight="35.0" prefWidth="250.0" styleClass="textField2">
+                           <HBox.margin>
+                              <Insets left="88.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" top="20.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="168.0" prefWidth="600.0">
+               <children>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#backbtn" prefHeight="58.0" prefWidth="120.0" styleClass="appBtn-red" text="Hủy">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="100.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#insertdata" prefHeight="58.0" prefWidth="120.0" styleClass="appBtn-green" text="Thêm">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

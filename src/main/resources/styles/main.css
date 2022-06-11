@@ -1,0 +1,85 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-image: url("/Image/login_bg.jpg");
+    -fx-background-size: cover;
+}
+#loginPane{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20 20 0 0;
+}
+#pane1{
+    -fx-background-color: linear-gradient(to left, #E65EBA, #0EB1EF);
+    -fx-background-radius: 20 20 0 0;
+}
+#pane3{
+    -fx-background-color: #FFFFFF;  
+    -fx-background-radius: 50%;
+}
+.paneUserPass{
+    -fx-background-color: #2CA8E9; 
+    
+}
+.textField{
+    -fx-background-radius: 0;
+}
+.icon{
+    -fx-position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.appBtn{
+    -fx-background-color: #2CA8E9; 
+    -fx-background-radius: 10px;
+    -fx-border-radius: 2px;
+    -fx-text-fill: white;
+}
+
+.appBtn-red{
+    -fx-background-color: #E04006; 
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+}
+
+.appBtn-green{
+    -fx-background-color: #1FCB5E; 
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+}
+.buttonindashboard{
+    -fx-background-color: #2CA8E9; 
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+}
+.tabButton{
+    -fx-background-color: white;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #000000;
+    -fx-opacity: 47%; 
+}
+.tabButton2{
+    -fx-background-color: white;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #000000;
+}
+.casualPane{
+   -fx-background-color: white; 
+}
+.line{
+    -fx-opacity: 47%;
+}
+.combobox, .searchField, .textField2 {
+    -fx-background-color: white;
+    -fx-border-color: #8C8C8C;
+    -fx-border-radius: 2px;
+}
+.panel {
+    -fx-background-color: #2CA8E9;
+    -fx-background-radius: 10;
+}
+

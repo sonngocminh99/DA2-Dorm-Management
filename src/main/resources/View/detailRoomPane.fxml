@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" styleClass="casualPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dormmanagement.DetailRoomPaneController">
+    <stylesheets>
+        <URL value="@/styles/main.css" />
+    </stylesheets>
+   <children>
+      <HBox layoutY="150.0" prefHeight="200.0" prefWidth="800.0" AnchorPane.topAnchor="170.0">
+         <children>
+            <TableView fx:id="dataTableView" prefHeight="200.0" prefWidth="800.0" stylesheets="@../styles/table.css">
+               <columns>
+                  <TableColumn fx:id="idstudentCol" prefWidth="100.0" style="-fx-background-color: transparent; -fx-alignment: center;" styleClass="column" text="ID Sinh viên" />
+                  <TableColumn fx:id="nameCol" prefWidth="100.0" style="-fx-background-color: transparent; -fx-alignment: center;" text="Họ và tên" />
+                  <TableColumn fx:id="genderCol" prefWidth="100.0" style="-fx-background-color: transparent; -fx-alignment: center;" text="Giới tính" />
+                  <TableColumn fx:id="universityCol" prefWidth="100.0" style="-fx-background-color: transparent; -fx-alignment: center;" text="Trường học" />
+                  <TableColumn fx:id="toolCol" prefWidth="100.0" style="-fx-background-color: transparent; -fx-alignment: center;" />
+               </columns>
+               <styleClass>
+                  <String fx:value="table" />
+                  <String fx:value="column-header-background" />
+               </styleClass>
+            </TableView>
+         </children>
+      </HBox>
+      <VBox prefHeight="150.0" prefWidth="400.0" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox layoutX="10.0" layoutY="10.0" prefWidth="200.0">
+               <children>
+                  <Label text="Tòa">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="apartmentLable" text="Label">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="150.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="56.0" prefWidth="200.0">
+               <children>
+                  <Label text="Số lượng đã ở">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="nostudentLable" text="Label">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="64.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="148.0" prefWidth="200.0">
+               <children>
+                  <Label text="Loại phòng">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="typeLable" text="Label">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="88.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="400.0" prefHeight="150.0" prefWidth="400.0" AnchorPane.bottomAnchor="349.6" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox prefWidth="200.0">
+               <children>
+                  <Label text="Phòng">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="roomLable" text="Label">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="128.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefWidth="200.0">
+               <children>
+                  <Label fx:id="eNum" text="Trạng thái">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="statusLable" text="Label">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="95.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefWidth="200.0">
+               <children>
+                  <Label text="Giá thuê">
+                     <font>
+                        <Font name="Segoe UI Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="rentingpriceLable" text="Label">
+                     <font>
+                        <Font name="Segoe UI" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="112.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <BorderPane layoutX="200.0" layoutY="350.0" prefHeight="100.0" prefWidth="400.0" AnchorPane.topAnchor="380.0">
+         <center>
+            <Button mnemonicParsing="false" onAction="#backbtn" prefHeight="38.0" prefWidth="100.0" styleClass="appBtn-red" text="Quay lại" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </Button>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
