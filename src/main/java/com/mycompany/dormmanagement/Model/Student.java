@@ -357,7 +357,7 @@ public class Student {
         ResultSet resultSet = null;
         try {        
             statement = con.createStatement();
-            String query = "Select Fullname from student where status = 'CX' and active = 'yes'";
+            String query = "Select IDStudent from student where status = 'CX' and active = 'yes'";
             resultSet = statement.executeQuery(query);
             while(resultSet.next()){
               listStudent.add(resultSet.getString(1));

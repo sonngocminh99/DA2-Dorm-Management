@@ -54,7 +54,7 @@ public class RoomArrangementFormController implements Initializable {
     @FXML
     private ComboBox apartmentComboBox, roomComboBox;
     @FXML
-    private TextField nameText, genderText;
+    private TextField nameText, genderText,idText;
     @FXML
     private Button cancleBtn, addBtn;
     //xử lý việc chọn combobox của người dùng
@@ -83,14 +83,16 @@ public class RoomArrangementFormController implements Initializable {
     //xử lý sự kiện thay đổi văn bản
     @FXML
     void TextChange(KeyEvent event){
-        String name = nameText.getText();
-        if(name.isEmpty()){
+        String id = idText.getText();
+        if(id.isEmpty()){
             genderText.setText("Nam");
+            nameText.setText("");
         } else {
             
             student = new Student();
-            student.getInfo(name);
+            student.getInfoByID(id);
             genderText.setText(student.getGender());
+            nameText.setText(student.getFullName());
         }
         String gender = genderText.getText();
         //kiểm tra nếu gander khác rỗng thì render lại apartmentCombobox và roomCombobox
@@ -105,12 +107,13 @@ public class RoomArrangementFormController implements Initializable {
                 lgr.log(Level.WARNING, ex.getMessage(), ex);
             }
         }
+        
     }
     //xử lý nút thêm sinh viên
     @FXML
     void insertData(ActionEvent event){
         //lấy dữ liệu từ các text box
-        String name = nameText.getText();
+        String id = idText.getText();
         String apartmentName = apartmentComboBox.getValue().toString();
         String roomName = roomComboBox.getValue().toString();
         apartment = new Apartment();
@@ -118,7 +121,7 @@ public class RoomArrangementFormController implements Initializable {
         room = new Room();
         room.getInfo(roomName);
         student = new Student();
-        student.getInfo(name);
+        student.getInfoByID(id);
         //gọi hàm addStudent và UpdateRoom
         try {
             student.updateRoom(room.getRoomID());
@@ -199,7 +202,7 @@ public class RoomArrangementFormController implements Initializable {
 //      
         addRoomToCombobox(roomComboBox);
         roomComboBox.getSelectionModel().select(0); 
-        autoCompleteText(nameText);
+        autoCompleteText(idText);
         
     }
     

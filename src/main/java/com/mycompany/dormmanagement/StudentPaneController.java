@@ -354,15 +354,20 @@ public class StudentPaneController implements Initializable {
     
     private void autoArrangement() {
         student = new Student();
-        room = new Room();
+        
         ArrayList<String> listStudentID = student.getIDEmptyStudent();
         try {
             for(var item : listStudentID){
                System.out.println(item);
+            room = new Room();
             student.getInfoByID(item);     
             room.getInfo(room.getRoomAvailableWithGender(student.getGender()));
+            if(!room.getRoomID().isEmpty())   
+            {
             student.updateRoom(room.getRoomID());
             room.addStudentToRoom();
+            }
+            
         }
         showtification("Tự động xếp phòng thành công");
         refreshTable(); 

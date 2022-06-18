@@ -228,7 +228,7 @@ public ObservableList<Map<String, Object>> getSearchRoom(String apartment, int o
         try {        
             statement = con.createStatement();
 
-            String query = "Select IDRoom from room where IDApartment ='"+ apartment+"' and status = 'Còn chỗ'";
+            String query = "Select IDRoom from room where IDApartment ='"+ apartment+"' and status = 'Còn chỗ' and active='yes'";
             //thực hiện câu query và lưu kết quả vào room
             resultSet = statement.executeQuery(query);
             while(resultSet.next()){

@@ -12,12 +12,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="600.0" styleClass="casualPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dormmanagement.RoomArrangementFormController">
+<AnchorPane id="AnchorPane" prefHeight="380.0" prefWidth="600.0" styleClass="casualPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dormmanagement.RoomArrangementFormController">
     <stylesheets>
         <URL value="@/styles/main.css" />
     </stylesheets>
    <children>
-      <BorderPane prefHeight="358.0" prefWidth="600.0">
+      <BorderPane prefHeight="380.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <bottom>
             <HBox prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                <children>
@@ -51,7 +51,7 @@
                <children>
                   <HBox prefHeight="48.0" prefWidth="600.0">
                      <children>
-                        <Label text="Họ và tên: ">
+                        <Label prefWidth="92.0" text="ID: ">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
@@ -59,7 +59,27 @@
                               <Insets left="130.0" top="5.0" />
                            </HBox.margin>
                         </Label>
-                        <TextField fx:id="nameText" onKeyReleased="#TextChange" prefHeight="45.0" prefWidth="250.0" styleClass="textField2">
+                        <TextField fx:id="idText" onKeyReleased="#TextChange" prefHeight="45.0" prefWidth="250.0" styleClass="textField2">
+                           <HBox.margin>
+                              <Insets left="18.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="30.0" prefHeight="48.0" prefWidth="600.0">
+                     <children>
+                        <Label prefWidth="92.0" text="Họ và tên:">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="130.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="nameText" disable="true" prefHeight="45.0" prefWidth="250.0" styleClass="textField2">
                            <HBox.margin>
                               <Insets left="18.0" />
                            </HBox.margin>
